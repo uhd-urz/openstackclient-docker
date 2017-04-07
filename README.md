@@ -12,6 +12,13 @@ The difference with the container image is that you need to pass these variables
 docker run $(for v in OS_AUTH_URL OS_TENANT_ID OS_TENANT_NAME OS_PROJECT_NAME OS_REGION_NAME OS_USERNAME OS_PASSWORD ; do echo --env $v=${!v} ; done) quay.io/urzds/openstackclient --version
 ```
 
+Or in Fish shell:
+```fish
+. openrc.fish
+docker run (for v in OS_AUTH_URL OS_TENANT_ID OS_TENANT_NAME OS_PROJECT_NAME OS_REGION_NAME OS_USERNAME OS_PASSWORD ; echo --env $v=$$v ; end) quay.io/urzds/openstackclient --version
+```
+
+
 This will expand to:
 ```
 docker run --env OS_AUTH_URL=... --env OS_TENANT_ID=... --env OS_TENANT_NAME=... --env OS_PROJECT_NAME=... --env OS_REGION_NAME=... --env OS_USERNAME=... --env OS_PASSWORD=... quay.io/urzds/openstackclient --version
