@@ -1,7 +1,7 @@
 FROM docker.io/library/alpine:3.6
 MAINTAINER Dennis Schridde <dennis.schridde@uni-heidelberg.de>
 
-ENV OPENSTACKCLIENT_VERSION=3.9.0 \
+ENV OPENSTACKCLIENT_VERSION=3.11.0 \
 	QEMU_VERSION=2.8.1
 
 RUN dev_pkgs='\
