@@ -1,6 +1,6 @@
 # OpenStackClient
 
-A simple container image containing the OpenStack client.
+A simple container image containing the OpenStack client and QEmu image tools.
 
 # Usage
 

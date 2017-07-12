@@ -1,7 +1,8 @@
 FROM docker.io/library/alpine:3.5
 MAINTAINER Dennis Schridde <dennis.schridde@uni-heidelberg.de>
 
-ENV OPENSTACKCLIENT_VERSION=3.9.0
+ENV OPENSTACKCLIENT_VERSION=3.9.0 \
+	QEMU_VERSION=2.8.1
 
 RUN dev_pkgs='\
 	gcc \
@@ -12,6 +13,7 @@ RUN dev_pkgs='\
 && apk add --no-cache \
 	ca-certificates \
 	py-pip \
+	"qemu-img>=$QEMU_VERSION" \
 	tini \
 	$dev_pkgs \
 && pip install \
