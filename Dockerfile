@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.5
+FROM docker.io/library/alpine:3.6
 MAINTAINER Dennis Schridde <dennis.schridde@uni-heidelberg.de>
 
 ENV OPENSTACKCLIENT_VERSION=3.9.0 \
