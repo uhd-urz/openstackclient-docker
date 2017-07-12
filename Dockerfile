@@ -17,7 +17,7 @@ RUN dev_pkgs='\
 	tini \
 	$dev_pkgs \
 && pip install \
-	python-openstackclient==$OPENSTACKCLIENT_VERSION \
+	"python-openstackclient==$OPENSTACKCLIENT_VERSION" \
 && apk del \
 	$dev_pkgs
 
