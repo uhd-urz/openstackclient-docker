@@ -21,4 +21,6 @@ RUN dev_pkgs='\
 && apk del \
 	$dev_pkgs
 
-ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/openstack"]
+ADD entrypoint.sh /
+
+ENTRYPOINT ["/sbin/tini", "--", "/entrypoint.sh"]
