@@ -26,7 +26,7 @@ if test -n "$USE_CRON" ; then
 	exec /usr/sbin/crond -f "$@"
 else
 	if test -n "$LOGFILE" ; then
-		exec > "$LOGFILE" 2>&1
+		exec >> "$LOGFILE" 2>&1
 	fi
 
 	exec "$COMMAND" "$@"
